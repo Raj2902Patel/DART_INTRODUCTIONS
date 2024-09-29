@@ -1,16 +1,23 @@
-class Student {
-  Student() {
-    print("Default Constructor");
-  }
+void main() {
+  var s1 = new Student();
+  s1.name = "Neel Patel";
+  s1.rollnumber = 17;
 
-  Student.namedConst(String brand) {
-    print("The Brand Name Is ${brand}");
-  }
+  print("Student name is ${s1.name} and RollNumber is ${s1.rollnumber}");
+
+  // ignore: unused_local_variable
+  var s2 = new Student.nameConstructor("Ahmedabad");
 }
 
-void main() {
-  // ignore: unused_local_variable
-  Student stu1 = new Student();
-  // ignore: unused_local_variable
-  Student stu2 = new Student.namedConst("Apple");
+class Student {
+  String? name;
+  int? rollnumber;
+
+  Student() {
+    print("This is Default Constructor");
+  }
+
+  Student.nameConstructor(String city) {
+    print("The City Name Is -> ${city}");
+  }
 }

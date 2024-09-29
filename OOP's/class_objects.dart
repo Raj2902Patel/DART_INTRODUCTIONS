@@ -2,10 +2,6 @@ class Student {
   int? id;
   String? name;
 
-  Student() {
-    print("This is my default constructor");
-  }
-
   void study() {
     print("${this.name} is now studying");
   }
